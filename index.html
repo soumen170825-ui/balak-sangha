@@ -1,65 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Balak Sangha</title>
-
-<link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balak Sangha Football Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
+<!-- HEADER / NAVBAR -->
 <header>
-<h1>Balak Sangha</h1>
-<p>Mondalpara, Ward No. 35, Jagatdal - 743127</p>
-<p>ESTD - 1954</p>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="images/club-logo.png" alt="Balak Sangha Logo">
+            <h1>Balak Sangha</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<section>
-<h2>About Us</h2>
-
-<p>
-Balak Sangha Football Club, established in 1954, is one of the oldest and most respected football clubs in Jagatdal.
-</p>
-
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Balak Sangha Football Club</h2>
+        <p>Legacy Since 1954</p>
+        <a href="#contact" class="btn">Join Us</a>
+    </div>
 </section>
 
-<section>
-
-<h2>Gallery</h2>
-
-<div class="gallery">
-
-<img src="./images/photo1.jpg">
-<img src="./images/photo2.jpg">
-<img src="./images/photo3.jpg">
-<img src="./images/photo4.jpg">
-
-</div>
-
+<!-- ABOUT SECTION -->
+<section id="about" class="about section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Balak Sangha Football Club, founded in 1954, is one of the oldest and most respected football clubs in Jagatdal. We nurture young talents and celebrate the spirit of sportsmanship.</p>
+        <ul class="milestones">
+            <li>🏆 Established: 1954</li>
+            <li>⚽ Matches Played: 1000+</li>
+            <li>🥇 Championships Won: 50+</li>
+        </ul>
+    </div>
 </section>
 
-<section>
-
-<h2>Contact</h2>
-
-<p>Surya Bikash Chakraborty</p>
-<p>Email: soumen836@hotmail.com</p>
-<p>Phone: 7980762148</p>
-
-<a href="https://www.facebook.com/profile.php?id=61578133274974" target="_blank">
-Visit Facebook
-</a>
-
+<!-- GALLERY SECTION -->
+<section id="gallery" class="gallery section">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images/photo1.jpg" alt="Club Photo 1">
+            <img src="images/photo2.jpg" alt="Club Photo 2">
+            <img src="images/photo3.jpg" alt="Club Photo 3">
+            <img src="images/photo4.jpg" alt="Club Photo 4">
+        </div>
+    </div>
 </section>
 
+<!-- EVENTS SECTION -->
+<section id="events" class="events section">
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <div class="event-cards">
+            <div class="event-card">
+                <h3>Annual Football Tournament</h3>
+                <p>📅 Date: 15-Apr-2026</p>
+                <p>📍 Venue: Jagatdal Ground</p>
+            </div>
+            <div class="event-card">
+                <h3>Youth Training Camp</h3>
+                <p>📅 Date: 01-May-2026</p>
+                <p>📍 Venue: Club Stadium</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section id="team" class="team section">
+    <div class="container">
+        <h2>Our Committee</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/member1.jpg" alt="Member 1">
+                <h3>Surya Bikash Chakraborty</h3>
+                <p>President</p>
+            </div>
+            <div class="team-member">
+                <img src="images/member2.jpg" alt="Member 2">
+                <h3>Soumen Das</h3>
+                <p>Secretary</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>📍 Mondalpara, Ward No. 35, Jagatdal - 743127</p>
+            <p>📧 Email: soumen836@hotmail.com</p>
+            <p>📞 Phone: 7980762148</p>
+            <p>🔗 Facebook: <a href="https://www.facebook.com/BalakSangha" target="_blank">Balak Sangha FC</a></p>
+        </div>
+        <form action="#" class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- QR CODE & WHATSAPP SECTION -->
+<section id="qrcode" class="qrcode section">
+    <div class="container">
+        <h2>Connect with Us</h2>
+        <p>Scan the QR code or chat with us on WhatsApp:</p>
+        <div class="qrcode-container fade-in">
+            <img id="facebook-qr" alt="Facebook QR Code">
+        </div>
+        <a id="whatsapp-btn" href="#" target="_blank" class="btn whatsapp-btn fade-in">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-
-<p>© 1954 Balak Sangha</p>
-
+    <div class="container footer-container">
+        <p>© 1954 Balak Sangha Football Club. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/BalakSangha" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

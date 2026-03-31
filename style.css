@@ -1,98 +1,69 @@
-body{
-font-family: Arial, sans-serif;
-margin:0;
-padding:0;
-background:#071739;
-color:white;
-}
+/* General Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+body { line-height: 1.6; color: #333; }
 
 /* Header */
+header { background: #004d00; color: white; position: sticky; top: 0; z-index: 100; }
+header .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+header nav ul { list-style: none; display: flex; gap: 15px; }
+header nav ul li a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+header nav ul li a:hover { color: #ffcc00; }
 
-header{
-text-align:center;
-padding:40px;
-background:#0a1f44;
-}
+/* Hero Section */
+.hero { height: 80vh; background: url('images/hero.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.hero h2 { font-size: 3rem; }
+.hero p { font-size: 1.5rem; margin: 10px 0 20px; }
+.btn { background: #ffcc00; color: #004d00; padding: 10px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+.btn:hover { background: #e6b800; }
 
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
+/* Section */
+.section { padding: 60px 20px; }
+.section h2 { text-align: center; margin-bottom: 30px; color: #004d00; }
 
-/* Sections */
-
-section{
-padding:40px;
-}
-
-/* Headings */
-
-h1,h2,h3{
-color:#ffd700;
-}
+/* About */
+.about p { max-width: 700px; margin: 0 auto 20px; text-align: center; }
+.milestones { list-style: none; display: flex; justify-content: center; gap: 20px; font-weight: bold; }
 
 /* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.gallery-grid img { width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.3s; }
+.gallery-grid img:hover { transform: scale(1.05); }
 
-.gallery{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-}
+/* Events */
+.event-cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.event-card { background: #f2f2f2; padding: 20px; border-radius: 10px; width: 250px; text-align: center; transition: transform 0.3s; }
+.event-card:hover { transform: scale(1.05); }
 
-.gallery img{
-width:300px;
-margin:10px;
-border-radius:10px;
-transition:0.3s;
-}
+/* Team */
+.team-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.team-member { text-align: center; width: 200px; }
+.team-member img { width: 150px; border-radius: 50%; margin-bottom: 10px; }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+/* Contact */
+.contact-info { text-align: center; margin-bottom: 30px; }
+.contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+.contact-form button { width: 150px; align-self: center; }
 
-/* List */
+/* QR Code Section */
+.qrcode { text-align: center; }
+.qrcode-container img { width: 200px; height: 200px; margin-top: 15px; border: 4px solid #004d00; border-radius: 15px; }
+.whatsapp-btn { display: inline-block; margin-top: 20px; background: #25D366; color: white; padding: 12px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; transition: background 0.3s; }
+.whatsapp-btn i { margin-right: 8px; }
+.whatsapp-btn:hover { background: #1ebe57; }
 
-ul{
-line-height:30px;
-}
-
-/* Contact Button */
-
-a{
-background:#ffd700;
-color:black;
-padding:10px 20px;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-}
-
-a:hover{
-background:white;
-}
+/* Fade-in Animation */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 1s ease-out, transform 1s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* Footer */
+footer { background: #004d00; color: white; padding: 20px; text-align: center; }
+footer .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+footer .social-icons a:hover { color: #ffcc00; }
 
-footer{
-text-align:center;
-padding:20px;
-background:#0a1f44;
-}
-
-/* Mobile Responsive */
-
+/* Responsive */
 @media(max-width:768px){
-
-header h1{
-font-size:28px;
-}
-
-.gallery img{
-width:90%;
-}
-
-section{
-padding:20px;
-}
-
+    header nav ul { flex-direction: column; background:#004d00; position:absolute; top:60px; right:0; width:200px; display:none; }
+    header nav ul.show { display:flex; }
+    header nav ul li { margin:10px 0; }
 }
