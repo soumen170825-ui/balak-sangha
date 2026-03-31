@@ -240,7 +240,23 @@ footer{text-align:center;padding:22px;background:#08111d;color:var(--muted)}
   inset: 0;
   z-index: 0;
 }
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
 
+.news-card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  border:1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: transform .3s ease;
+}
+.news-card:hover { transform: translateY(-6px); }
+.news-card h3 { color: var(--gold); font-size: 1.2rem; }
+.news-card p { color: var(--muted); font-size: .94rem; }
 /* Reveal animation (scroll) */
 .reveal {opacity:0;transform:translateY(24px);transition:all .8s ease;}
 .reveal.show{opacity:1;transform:none;}
