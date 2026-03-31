@@ -53,3 +53,41 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // Particles.js
 particlesJS("particles-js",{particles:{number:{value:55,density:{enable:true,value_area:900}},color:{value:"#d7b56d"},shape:{type:"circle"},opacity:{value:0.45,random:true},size:{value:2.8,random:true},line_linked:{enable:true,distance:140,color:"#ffffff",opacity:0.18,width:1},move:{enable:true,speed:1.7,direction:"none",random:false,straight:false}},interactivity:{detect_on:"canvas",events:{onhover:{enable:true,mode:"grab"},onclick:{enable:true,mode:"push"}},modes:{grab:{distance:150,line_linked:{opacity:0.45}},push:{particles_nb:3}}},retina_detect:true});
+// Load Gallery & Videos dynamically
+fetch('gallery.json')
+  .then(res => res.json())
+  .then(data => {
+    // Images
+    const galleryWrapper = document.getElementById('galleryWrapper');
+    data.images.forEach(src => {
+      galleryWrapper.innerHTML += `
+        <div class="swiper-slide">
+          <img src="${src}" alt="Balak Sangha Gallery">
+        </div>`;
+    });
+
+    new Swiper(".gallery-swiper", {
+      loop: true,
+      autoplay: { delay: 2500 },
+      pagination: { el: ".gallery-swiper .swiper-pagination", clickable: true },
+      navigation: { nextEl: ".gallery-swiper .swiper-button-next", prevEl: ".gallery-swiper .swiper-button-prev" },
+    });
+
+    // Videos
+    const videoWrapper = document.getElementById('videoWrapper');
+    data.videos.forEach(src => {
+      videoWrapper.innerHTML += `
+        <div class="swiper-slide">
+          <video controls muted>
+            <source src="${src}" type="video/mp4">
+          </video>
+        </div>`;
+    });
+
+    new Swiper(".video-swiper", {
+      loop: true,
+      autoplay: { delay: 3500 },
+      pagination: { el: ".video-swiper .swiper-pagination", clickable: true },
+      navigation: { nextEl: ".video-swiper .swiper-button-next", prevEl: ".video-swiper .swiper-button-prev" },
+    });
+  });
