@@ -8,48 +8,40 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="https://soumen170825-ui.github.io/balak-sangha/" target="_blank">Facebook</a></li>
-    <li><a href="https://wa.me/917980762148" target="_blank">WhatsApp</a></li>
-  </ul>
-</nav>
+<header>
+    <h1>Balak Sangha Football Club</h1>
+    <nav>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<!-- Hero Section -->
-<section id="hero">
-  <img src="Hero.jpeg" alt="Club Hero Image">
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="images/photo1.jpg" alt="Photo 1">
+        <img src="images/photo2.jpg" alt="Photo 2">
+        <img src="images/photo3.jpg" alt="Photo 3">
+    </div>
 </section>
 
-<!-- Gallery Section -->
-<section>
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="photo1.jpeg" alt="">
-    <img src="photo2.jpeg" alt="">
-    <img src="photo3.jpeg" alt="">
-    <img src="photo4.jpeg" alt="">
-    <img src="photo5.jpeg" alt="">
-    <img src="photo6.jpeg" alt="">
-  </div>
+<section id="social">
+    <h2>Connect with Us</h2>
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/profile.php?id=61578133274974" target="_blank" class="facebook">Facebook</a>
+        <a id="whatsapp" target="_blank" class="whatsapp">WhatsApp</a>
+    </div>
+    <div id="qr-code" class="fade-in"></div>
 </section>
 
-<!-- Contact Section: QR + WhatsApp -->
-<section id="contact" class="contact-section">
-  <h2>Connect with Us</h2>
+<footer>
+    <p>&copy; 1954 Balak Sangha Football Club. All Rights Reserved.</p>
+</footer>
 
-  <div class="qr-container">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://soumen170825-ui.github.io/balak-sangha/" alt="Facebook QR Code">
-    <p>Scan to visit our Facebook Page</p>
-  </div>
-
-  <div class="whatsapp-container">
-    <a href="https://wa.me/917980762148" target="_blank" class="whatsapp-button">Chat with us on WhatsApp</a>
-  </div>
-</section>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
