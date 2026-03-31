@@ -91,3 +91,26 @@ fetch('gallery.json')
       navigation: { nextEl: ".video-swiper .swiper-button-next", prevEl: ".video-swiper .swiper-button-prev" },
     });
   });
+const newsList = [
+  {
+    title: "Balak Sangha wins local tournament",
+    text: "Balak Sangha started strong in the Inter‑Club League with a thrilling win in the season opener!",
+  },
+  {
+    title: "Youth finals next week",
+    text: "The youth team prepares for next weekend’s finals — come support!",
+  },
+  {
+    title: "New Trainings Added",
+    text: "Structured training sessions added for U‑15 and U‑18 players every Saturday.",
+  }
+];
+
+const newsContainer = document.getElementById("newsContainer");
+newsList.forEach(item => {
+  newsContainer.innerHTML += `
+    <div class="news-card">
+      <h3>${item.title}</h3>
+      <p>${item.text}</p>
+    </div>`;
+});
