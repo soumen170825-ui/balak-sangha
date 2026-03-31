@@ -1,35 +1,102 @@
-/* Contact Section */
-.contact-section {
-  text-align: center;
-  padding: 40px 20px;
-  background: #f9f9f9;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
-.qr-container, .whatsapp-container {
-  margin: 20px auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
+header {
+    background-color: #006400;
+    color: white;
+    padding: 15px;
 }
 
-/* Fade-in active state */
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-buttons a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.social-buttons a.facebook {
+    background-color: #3b5998;
+}
+
+.social-buttons a.whatsapp {
+    background-color: #25D366;
+}
+
+.social-buttons a:hover {
+    transform: scale(1.1);
+}
+
+#qr-code {
+    margin-top: 20px;
+}
+
 .fade-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
-/* WhatsApp Button Styling */
-.whatsapp-button {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 50px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
-.whatsapp-button:hover {
-  background-color: #1DA851;
+footer {
+    background-color: #006400;
+    color: white;
+    padding: 15px;
 }
