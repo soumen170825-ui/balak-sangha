@@ -110,3 +110,40 @@ particlesJS("particles-js",{
     modes:{grab:{distance:150,line_linked:{opacity:0.45}},push:{particles_nb:3}}},
   retina_detect:true
 });
+// Build Swiper Slides
+const galleryImages = ['images/photo1.jpg','images/photo2.jpg','images/photo3.jpg'];
+const galleryWrapper = document.getElementById('galleryWrapper');
+galleryImages.forEach(src => {
+  galleryWrapper.innerHTML += `
+    <div class="swiper-slide">
+      <img src="${src}" alt="Balak Sangha Image">
+    </div>`;
+});
+
+// Initialize Swiper for Images
+new Swiper(".gallery-swiper", {
+  loop:true,
+  autoplay: { delay: 2500, disableOnInteraction: false },
+  pagination: { el: ".gallery-swiper .swiper-pagination", clickable: true },
+  navigation: { nextEl: ".gallery-swiper .swiper-button-next", prevEl: ".gallery-swiper .swiper-button-prev" },
+});
+
+// Video Slides
+const videoFiles = ['videos/video1.mp4','videos/video2.mp4'];
+const videoWrapper = document.getElementById('videoWrapper');
+videoFiles.forEach(src => {
+  videoWrapper.innerHTML += `
+    <div class="swiper-slide">
+      <video controls muted>
+        <source src="${src}" type="video/mp4">
+      </video>
+    </div>`;
+});
+
+// Initialize Swiper for Videos
+new Swiper(".video-swiper", {
+  loop:true,
+  autoplay: { delay: 3500, disableOnInteraction: false },
+  pagination: { el: ".video-swiper .swiper-pagination", clickable: true },
+  navigation: { nextEl: ".video-swiper .swiper-button-next", prevEl: ".video-swiper .swiper-button-prev" },
+});
