@@ -294,3 +294,71 @@ footer{text-align:center;padding:22px;background:#08111d;color:var(--muted)}
     transform: translateY(-30px) rotate(20deg);
   }
 }
+/* Container Layout */
+.info-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 40px;
+  background-color: #050505; /* Deep black background */
+  flex-wrap: wrap;
+}
+
+/* Base Card Styling */
+.card {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.05); /* Semi-transparent glass effect */
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 15px;
+}
+
+.card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+/* Specific Glow Colors */
+.card-green { border: 2px solid #2ecc71; box-shadow: 0 0 15px rgba(46, 204, 113, 0.3); }
+.card-green h3 { color: #2ecc71; }
+
+.card-gold { border: 2px solid #f1c40f; box-shadow: 0 0 15px rgba(241, 196, 15, 0.3); }
+.card-gold h3 { color: #f1c40f; }
+
+.card-purple { border: 2px solid #9b59b6; box-shadow: 0 0 15px rgba(155, 89, 182, 0.3); }
+.card-purple h3 { color: #9b59b6; }
