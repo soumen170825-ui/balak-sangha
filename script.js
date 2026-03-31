@@ -147,3 +147,29 @@ new Swiper(".video-swiper", {
   pagination: { el: ".video-swiper .swiper-pagination", clickable: true },
   navigation: { nextEl: ".video-swiper .swiper-button-next", prevEl: ".video-swiper .swiper-button-prev" },
 });
+// Typing Animation for Hero Title
+const heroTitle = document.querySelector(".hero-copy h1");
+const text = heroTitle.textContent;
+heroTitle.textContent = "";
+let i = 0;
+
+function typeHero() {
+  if(i < text.length){
+    heroTitle.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeHero, 100);
+  }
+}
+window.addEventListener('load', typeHero);
+particlesJS("particles-js", {
+  particles: {
+    number:{value:35,density:{enable:true,value_area:900}},
+    color:{value:"#d7b56d"},
+    shape:{type:"circle"},opacity:{value:0.3,random:true},
+    size:{value:2,random:true},
+    line_linked:{enable:true,distance:120,color:"#ffffff",opacity:0.15,width:1},
+    move:{enable:true,speed:1.2}
+  },
+  interactivity:{detect_on:"canvas",events:{onhover:{enable:true,mode:"grab"},onclick:{enable:true,mode:"push"}}},
+  retina_detect:true
+});
