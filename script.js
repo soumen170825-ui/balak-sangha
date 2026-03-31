@@ -1,11 +1,11 @@
-// Dynamic Gallery
+// Dynamic Image Gallery
 const galleryImages = [
   'images/photo1.jpg',
   'images/photo2.jpg',
   'images/photo3.jpg'
 ];
 const galleryContainer = document.getElementById('galleryContainer');
-galleryImages.forEach(src=>{
+galleryImages.forEach(src => {
   const img = document.createElement('img');
   img.src = src;
   img.alt = "Balak Sangha";
@@ -18,17 +18,17 @@ const videoFiles = [
   'videos/video2.mp4'
 ];
 const videoContainer = document.getElementById('videoContainer');
-videoFiles.forEach(src=>{
-  const video=document.createElement('video');
-  video.src=src;
-  video.controls=true;
+videoFiles.forEach(src => {
+  const video = document.createElement('video');
+  video.src = src;
+  video.controls = true;
   videoContainer.appendChild(video);
 });
 
 // Current Year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Join Us Form Submission
+// Join Us Form - WhatsApp notification
 const joinForm = document.getElementById('joinForm');
 joinForm.addEventListener('submit', function(e){
   e.preventDefault();
@@ -37,7 +37,6 @@ joinForm.addEventListener('submit', function(e){
   const email = formData.get('email');
   const message = formData.get('message');
 
-  // Send notification using WhatsApp API links
   const numbers = ["7980762148","9330309071"];
   numbers.forEach(num => {
     const waLink = `https://wa.me/91${num}?text=${encodeURIComponent(`New Join Us Query from ${name} (${email}): ${message}`)}`;
