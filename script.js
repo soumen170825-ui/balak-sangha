@@ -46,3 +46,13 @@ joinForm.addEventListener('submit', function(e){
   alert('Your query has been sent! Thank you.');
   joinForm.reset();
 });
+/* Smooth Scroll for Navbar Links */
+document.querySelectorAll('header nav ul li a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.hash !== "") {
+      e.preventDefault();
+      const target = document.querySelector(this.hash);
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
