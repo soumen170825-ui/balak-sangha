@@ -1,47 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Balak Sangha Football Club</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balak Sangha Football Club</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- Header / Navbar -->
 <header>
-    <h1>Balak Sangha Football Club</h1>
+  <div class="container header-container">
+    <h1 class="club-name">Balak Sangha Football Club</h1>
     <nav>
-        <ul>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#joinus">Join Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61578133274974" target="_blank">FB</a></li>
+      </ul>
     </nav>
+  </div>
 </header>
 
-<section id="gallery">
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h2>Welcome to Balak Sangha</h2>
+    <p>Promoting football, youth development & community unity since 1954</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about">
+  <div class="container">
+    <h2>About Balak Sangha</h2>
+    <p>Balak Sangha Football Club, established in 1954, is one of the oldest and most respected football clubs in Jagatdal Buri Bot Tala (743127). Since its foundation, the club has been committed to promoting football, youth development, and community unity. Over the decades, Balak Sangha has nurtured local talents and created a strong sporting culture in the area.</p>
+    
+    <h3>Our Goals</h3>
+    <ul>
+      <li>Promote grassroots football development</li>
+      <li>Encourage youth participation in sports</li>
+      <li>Build discipline, teamwork, and leadership among players</li>
+      <li>Represent Jagatdal in district and local tournaments</li>
+      <li>Develop future professional football players</li>
+    </ul>
+    
+    <h3>Our Achievements</h3>
+    <ul>
+      <li>Successfully organizing local football tournaments for many years</li>
+      <li>Participation in various local and district football competitions</li>
+    </ul>
+    
+    <h3>Our Future Planning</h3>
+    <ul>
+      <li>Organize annual football tournaments</li>
+      <li>Provide structured training for young players</li>
+      <li>Upgrade sports equipment and facilities</li>
+      <li>Collaborate with local coaches and trainers</li>
+      <li>Expand participation in district & state-level tournaments</li>
+      <li>Promote football awareness in the local community</li>
+      <li>Producing talented players representing local leagues</li>
+      <li>Maintaining a strong football tradition since 1954</li>
+      <li>Active involvement in community sports and youth engagement</li>
+    </ul>
+
+    <h3>Our Vision</h3>
+    <p>To build a strong football culture and create opportunities for young talents while carrying forward the proud legacy of Balak Sangha since 1954.</p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section gallery">
+  <div class="container">
     <h2>Gallery</h2>
-    <div class="gallery">
-        <img src="images/photo1.jpg" alt="Photo 1">
-        <img src="images/photo2.jpg" alt="Photo 2">
-        <img src="images/photo3.jpg" alt="Photo 3">
-    </div>
+    <div class="gallery-container" id="galleryContainer"></div>
+  </div>
 </section>
 
-<section id="social">
-    <h2>Connect with Us</h2>
-    <div class="social-buttons">
-        <a href="https://www.facebook.com/profile.php?id=61578133274974" target="_blank" class="facebook">Facebook</a>
-        <a id="whatsapp" target="_blank" class="whatsapp">WhatsApp</a>
-    </div>
-    <div id="qr-code" class="fade-in"></div>
+<!-- Video Gallery Section -->
+<section id="videos" class="section video-gallery">
+  <div class="container">
+    <h2>Video Gallery</h2>
+    <div class="video-container" id="videoContainer"></div>
+  </div>
 </section>
 
+<!-- Join Us Section -->
+<section id="joinus" class="section joinus">
+  <div class="container">
+    <h2>Join Us</h2>
+    <form id="joinForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message / Query" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p><strong>Name:</strong> Surya Bikash Chakraborty</p>
+    <p><strong>Email:</strong> <a href="mailto:soumen836@hotmail.com">soumen836@hotmail.com</a></p>
+    <p><strong>Call / WhatsApp:</strong> <a href="tel:+917980762148">79807 62148</a></p>
+    <a href="https://wa.me/917980762148" target="_blank" class="whatsapp-btn">
+      <img src="assets/whatsapp.png" alt="WhatsApp" /> WhatsApp
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61578133274974" target="_blank" class="facebook-btn">
+      <img src="assets/facebook.png" alt="Facebook" /> Facebook
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-    <p>&copy; 1954 Balak Sangha Football Club. All Rights Reserved.</p>
+  <p>&copy; 1954 - <span id="currentYear"></span> Balak Sangha Football Club. All rights reserved.</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
