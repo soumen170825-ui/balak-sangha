@@ -78,3 +78,69 @@ document.getElementById("successMsg").innerText =
 this.reset();
 
 });
+
+let players = JSON.parse(localStorage.getItem("players")) || [];
+
+document.getElementById("playerForm")?.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let player = {
+name:document.getElementById("name").value,
+age:document.getElementById("age").value,
+position:document.getElementById("position").value,
+phone:document.getElementById("phone").value
+};
+
+players.push(player);
+
+localStorage.setItem("players",JSON.stringify(players));
+
+document.getElementById("successMsg").innerText =
+"Player Registered Successfully";
+
+this.reset();
+
+});
+
+function loadPlayers(){
+
+let table=document.getElementById("playerTable");
+
+players.forEach((p,i)=>{
+
+let row=`
+<tr>
+<td>${p.name}</td>
+<td>${p.age}</td>
+<td>${p.position}</td>
+<td>
+<a href="https://wa.me/91${p.phone}" target="_blank">
+Contact
+</a>
+</td>
+
+<td>
+<button onclick="deletePlayer(${i})">Delete</button>
+</td>
+
+</tr>
+`;
+
+table.innerHTML+=row;
+
+});
+
+}
+
+function deletePlayer(index){
+
+players.splice(index,1);
+
+localStorage.setItem("players",JSON.stringify(players));
+
+location.reload();
+
+}
+
+loadPlayers();
