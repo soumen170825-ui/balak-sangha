@@ -22,7 +22,8 @@ text-decoration:none;
 }
 
 .hero{
-height:55vh;
+transition:all 0.5s ease;
+}
 background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url('images/photo1.jpg');
 background-size:cover;
