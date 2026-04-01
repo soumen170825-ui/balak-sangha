@@ -68,3 +68,13 @@ document.querySelector(".gallery").appendChild(img);
 reader.readAsDataURL(file);
 
 }
+document.getElementById("playerForm")?.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+document.getElementById("successMsg").innerText =
+"Registration Successful! We will contact you soon.";
+
+this.reset();
+
+});
