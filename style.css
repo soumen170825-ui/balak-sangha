@@ -6,8 +6,8 @@ color:white;
 }
 
 header{
-text-align:center;
 background:black;
+text-align:center;
 padding:20px;
 }
 
@@ -22,7 +22,7 @@ text-decoration:none;
 }
 
 .hero{
-height:80vh;
+height:70vh;
 background:url('images/photo1.jpg');
 background-size:cover;
 display:flex;
@@ -61,18 +61,6 @@ border-radius:10px;
 section{
 padding:40px;
 text-align:center;
-}
-
-input{
-padding:10px;
-margin:10px;
-}
-
-button{
-padding:10px;
-background:gold;
-border:none;
-cursor:pointer;
 }
 
 footer{
