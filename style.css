@@ -92,3 +92,22 @@ color:white;
 text-align:center;
 margin-top:100px;
 }
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('images/photo1.jpg');
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.btn{
+background:gold;
+padding:15px 30px;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
