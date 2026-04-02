@@ -244,3 +244,16 @@ opacity:1;
 transform:translateY(0);
 }
 }
+/* Glow Button */
+.glow{
+background:gold;
+color:black;
+border-radius:5px;
+transition:0.3s;
+box-shadow:0 0 10px gold;
+}
+
+.glow:hover{
+box-shadow:0 0 20px gold, 0 0 40px gold;
+transform:scale(1.05);
+}
