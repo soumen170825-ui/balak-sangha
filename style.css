@@ -257,3 +257,27 @@ box-shadow:0 0 10px gold;
 box-shadow:0 0 20px gold, 0 0 40px gold;
 transform:scale(1.05);
 }
+/* Stats Section */
+.stats{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+background:#111;
+padding:40px 20px;
+}
+
+.stat{
+text-align:center;
+margin:20px;
+}
+
+.stat h2{
+font-size:40px;
+color:gold;
+margin-bottom:10px;
+}
+
+.stat p{
+font-size:16px;
+color:#ccc;
+}
